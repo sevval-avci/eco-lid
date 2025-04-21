@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Lid – A Lid That Grows</title>
+  <style>
+    body {
+      background-color: #f3fdf3;
+      color: #304232;
+      font-family: 'Segoe UI', sans-serif;
+      margin: auto;
+      max-width: 750px;
+      padding: 2rem;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    h1 {
+      color: #386641;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .section {
+      background: #ffffff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    }
+    .section h2 {
+      color: #6a994e;
+      margin-top: 0;
+    }
+    .intro {
+      font-size: 1.1rem;
+      font-style: italic;
+      text-align: center;
+      color: #4a5d45;
+      margin-bottom: 1.5rem;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .step {
+      background: #d8f3dc;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .step:hover {
+      background: #b7e4c7;
+      transform: scale(1.02);
+    }
+    .highlight {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .highlight div {
+      background: #eef6e8;
+      padding: 1rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+    .highlight div:hover {
+      background: #dcefd4;
+    }
+    .graphic {
+      text-align: center;
+    }
+    .graphic img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .quote {
+      background: #f1faee;
+      border-left: 5px solid #90be6d;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #556b5d;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #5e735e;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌱 Eco Lid</h1>
+
+  <p class="intro">
+    Every morning, millions of plastic lids are tossed away.<br>
+    But what if your coffee lid could do more than cover a cup?
+  </p>
+
+  <div class="section">
+    <h2>A Lid That Grows</h2>
+    <p>This lid is crafted from <strong>heat-treated potato starch</strong> 🥔 and <strong>spent coffee grounds</strong> ☕ — turning food waste into functional design. It's fully compostable and ready to return to the earth.</p>
+  </div>
+
+  <div class="section">
+    <h2>3 Simple Steps to Give Back</h2>
+    <div class="steps">
+      <div class="step">1️⃣ Enjoy your coffee – and keep the lid</div>
+      <div class="step">2️⃣ Bury it in your garden or a plant pot 🪴</div>
+      <div class="step">3️⃣ Watch nature take over – your lid becomes new life 🌿</div>
+    </div>
+    <p style="margin-top:1rem;">Your small action completes a big cycle.</p>
+  </div>
+
+  <div class="section graphic">
+    <h2>From Sip to Seedling</h2>
+    <img src="eco-lid-growth-v2.gif" alt="Eco Lid transforming into a plant">
+    <p style="font-size:0.9rem; color:#667;">Witness how your Eco Lid returns to nature, nurturing new life.</p>
+  </div>
+
+  <div class="section">
+    <h2>Why This Matters</h2>
+    <div class="highlight">
+      <div>🌍 0% plastic</div>
+      <div>🪱 100% compostable</div>
+      <div>💨 Saves carbon with every use</div>
+      <div>🌱 Grows green where it lands</div>
+      <div>🌬️ Adds a breath back to Earth*</div>
+    </div>
+    <p style="font-size: 0.85rem; color: #607c5c; margin-top: 1rem;">*Based on DEFRA (2023): ~7g CO₂ avoided per lid ≈ one human breath.</p>
+  </div>
+
+  <div class="section">
+    <h2>Designed With Purpose</h2>
+    <p>This is not just a lid. It’s a final-year Mechanical Engineering project at the University of Birmingham, turning waste into something useful, beautiful and kind to the planet.</p>
+    <div class="quote">“By planting this lid, you’re not just reducing waste — you’re starting something new.”</div>
+  </div>
+
+  <footer>
+    Created by Sevval Avci · University of Birmingham · Final Year Project 🌿
+  </footer>
+</body>
+</html>
