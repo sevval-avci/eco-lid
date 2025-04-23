@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Lid Growth – From Sip to Seedling</title>
+  <style>
+    body {
+      background-color: #f0fdf4;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2f5d34;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .plant-container {
+      width: 220px;
+      height: 320px;
+      margin: 0 auto 1rem auto;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .root, .stem, .leaf {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: none;
+    }
+
+    .animate .root {
+      animation: draw 2s ease-out forwards;
+    }
+
+    .animate .stem {
+      animation: draw 2s ease-out 2s forwards;
+    }
+
+    .animate .leaf1 {
+      animation: draw 1.5s ease-out 4s forwards;
+    }
+
+    .animate .leaf2 {
+      animation: draw 1.5s ease-out 4.5s forwards;
+    }
+
+    .animate .leaf3 {
+      animation: draw 1.5s ease-out 5s forwards;
+    }
+
+    .animate .leaf4 {
+      animation: draw 1.5s ease-out 5.5s forwards;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .reveal-text span {
+      opacity: 0;
+      display: inline-block;
+      transition: opacity 0.3s ease;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #304232;
+    }
+
+    .animate-text span.visible {
+      opacity: 1 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>From Sip to Seedling</h2>
+
+    <div class="plant-container" id="plant">
+      <svg viewBox="0 0 100 160">
+        <!-- Roots -->
+        <path d="M50 120 C40 130, 60 130, 50 140" fill="none" stroke="#8d6e63" stroke-width="2" class="root"/>
+        <path d="M50 120 C45 125, 35 135, 45 142" fill="none" stroke="#8d6e63" stroke-width="2" class="root"/>
+        <path d="M50 120 C55 125, 65 135, 55 142" fill="none" stroke="#8d6e63" stroke-width="2" class="root"/>
+
+        <!-- Stem -->
+        <line x1="50" y1="120" x2="50" y2="60" stroke="#388e3c" stroke-width="4" class="stem" />
+
+        <!-- Leaves -->
+        <path d="M50 90 C30 80, 30 60, 50 70" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf1" />
+        <path d="M50 80 C70 70, 70 50, 50 60" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf2" />
+        <path d="M50 70 C25 60, 25 40, 50 50" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf3" />
+        <path d="M50 65 C75 55, 75 35, 50 45" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf4" />
+      </svg>
+    </div>
+
+    <div class="reveal-text animate-text" id="revealText">
+      <span>1</span><span> </span><span>l</span><span>i</span><span>d</span><span> </span><span>=</span><span> </span><span>1</span><span> </span><span>p</span><span>l</span><span>a</span><span>n</span><span>t</span>
+    </div>
+  </div>
+
+  <script>
+    const plant = document.getElementById('plant');
+    const textSpans = document.querySelectorAll('#revealText span');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          plant.classList.add('animate');
+
+          setTimeout(() => {
+            textSpans.forEach((span, index) => {
+              setTimeout(() => {
+                span.classList.add('visible');
+              }, index * 200);
+            });
+          }, 7000);
+
+          observer.unobserve(plant);
+        }
+      });
+    }, {
+      threshold: 0.6
+    });
+
+    observer.observe(plant);
+  </script>
+</body>
+</html>
