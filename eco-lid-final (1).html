@@ -4,142 +4,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eco Lid Growth – Final</title>
+  <title>Eco Lid: A Lid That Grows</title>
   <style>
     body {
-      background-color: #f0fdf4;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fdf4;
+      color: #333;
     }
-
-    .spacer {
-      height: 100vh;
+    header {
+      background-color: #388e3c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
-
-    .plant-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-
-    .plant-container {
-      width: 220px;
-      height: 320px;
+    section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    section h2 {
+      color: #2f5d34;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
     }
-
-    svg {
-      width: 100%;
-      height: 100%;
+    section p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
-
-    .root, .stem, .leaf {
-      stroke-dasharray: 300;
-      stroke-dashoffset: 300;
-      animation: none;
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
-
-    .animate .root {
-      animation: draw 2s ease-out forwards;
+    .step {
+      background-color: #e6f4ea;
+      padding: 1rem;
+      border-left: 5px solid #388e3c;
+      border-radius: 8px;
     }
-
-    .animate .stem {
-      animation: draw 2s ease-out 2s forwards;
+    .gif-section {
+      text-align: center;
+      padding-top: 1rem;
     }
-
-    .animate .leaf1 {
-      animation: draw 1.5s ease-out 4s forwards;
+    .gif-section img {
+      width: 280px;
+      border-radius: 12px;
+      margin: 1rem 0;
     }
-
-    .animate .leaf2 {
-      animation: draw 1.5s ease-out 4.5s forwards;
-    }
-
-    .animate .leaf3 {
-      animation: draw 1.5s ease-out 5s forwards;
-    }
-
-    .animate .leaf4 {
-      animation: draw 1.5s ease-out 5.5s forwards;
-    }
-
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    .reveal-text span {
-      opacity: 0; display: inline-block;
-      transition: opacity 0.3s ease;
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #304232;
-    }
-
-    .animate-text span {
-      opacity: 1 !important;
+    footer {
+      background-color: #c8e6c9;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #2e7d32;
     }
   </style>
 </head>
 <body>
-  <div class="spacer"></div>
+  <header>
+    <h1>A Lid That Grows</h1>
+    <p>Compostable. Biodegradable. Meaningful.</p>
+  </header>
 
-  <div class="plant-section">
-    <div class="plant-container" id="plant">
-      <svg viewBox="0 0 100 160">
-        <!-- Roots -->
-        <path d="M50 120 C40 130, 60 130, 50 140" fill="none" stroke="#8d6e63" stroke-width="2" class="root"/>
-        <path d="M50 120 C45 125, 35 135, 45 142" fill="none" stroke="#8d6e63" stroke-width="2" class="root"/>
-        <path d="M50 120 C55 125, 65 135, 55 142" fill="none" stroke="#8d6e63" stroke-width="2" class="root"/>
+  <section class="gif-section">
+    <h2>From Sip to Seedling</h2>
+    <img src="eco-lid-growth-v2.gif" alt="Eco Lid transforming into a plant">
+    <p>Witness your coffee lid’s transformation from waste to wonder.</p>
+  </section>
 
-        <!-- Stem -->
-        <line x1="50" y1="120" x2="50" y2="60" stroke="#388e3c" stroke-width="4" class="stem" />
-
-        <!-- Leaves -->
-        <path d="M50 90 C30 80, 30 60, 50 70" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf1" />
-        <path d="M50 80 C70 70, 70 50, 50 60" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf2" />
-        <path d="M50 70 C25 60, 25 40, 50 50" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf3" />
-        <path d="M50 65 C75 55, 75 35, 50 45" fill="none" stroke="#66bb6a" stroke-width="4" class="leaf leaf4" />
-      </svg>
+  <section>
+    <h2>3 Simple Steps to Give Back</h2>
+    <div class="steps">
+      <div class="step"><strong>1. Sip:</strong> Enjoy your coffee as usual.</div>
+      <div class="step"><strong>2. Plant:</strong> Place the lid in soil — garden or pot.</div>
+      <div class="step"><strong>3. Grow:</strong> Watch it decompose and grow new life.</div>
     </div>
+  </section>
 
-    <div class="reveal-text" id="revealText">
-      <!-- Harf harf çıkacak metin -->
-      <span>1</span><span> </span><span>l</span><span>i</span><span>d</span><span> </span><span>=</span><span> </span><span>1</span><span> </span><span>p</span><span>l</span><span>a</span><span>n</span><span>t</span>
-    </div>
-  </div>
+  <section>
+    <h2>Why This Matters</h2>
+    <p>Every year, billions of plastic lids contribute to pollution. Our Eco Lid helps reduce waste by returning nutrients to the earth — made from food waste, infused with seeds, and ready to grow. Your small act can make a big environmental difference.</p>
+  </section>
 
-  <div class="spacer"></div>
+  <section>
+    <h2>Designed With Purpose</h2>
+    <p>The Eco Lid is made of spent coffee grounds and paper pulp — both biodegradable and breathable. Its ergonomic shape fits standard cups and encourages eco-conscious behavior. A QR code links users to this very page — to remind them of the power of planting change.</p>
+  </section>
 
-  <script>
-    const plant = document.getElementById('plant');
-    const textSpans = document.querySelectorAll('#revealText span');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          plant.classList.add('animate');
-
-          setTimeout(() => {
-            textSpans.forEach((span, index) => {
-              setTimeout(() => {
-                span.classList.add('animate-text');
-              }, index * 200);
-            });
-          }, 7000); // Bitki animasyonundan sonra başlar
-
-          observer.unobserve(plant);
-        }
-      });
-    }, {
-      threshold: 0.6
-    });
-
-    observer.observe(plant);
-  </script>
+  <footer>
+    ✨ Every sip makes an impact. Thank you for growing with us. ✨
+  </footer>
 </body>
 </html>
